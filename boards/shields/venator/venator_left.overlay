@@ -1,0 +1,13 @@
+#include "venator.dtsi"
+
+// Left half, columns listed outer -> inner (physical left to right)
+&kscan0 {
+    col-gpios
+        = <&pro_micro 1 GPIO_ACTIVE_HIGH> // outer
+        , <&pro_micro 0 GPIO_ACTIVE_HIGH> // pinky
+        , <&pro_micro 2 GPIO_ACTIVE_HIGH> // ring
+        , <&pro_micro 3 GPIO_ACTIVE_HIGH> // middle
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH> // index
+        , <&pro_micro 5 GPIO_ACTIVE_HIGH> // inner ("thumb" column in the Ergogen file)
+        ;
+};

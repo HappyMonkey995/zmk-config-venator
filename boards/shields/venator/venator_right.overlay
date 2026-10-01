@@ -1,0 +1,19 @@
+#include "venator.dtsi"
+
+// Right half columns continue after the left half's 6
+&default_transform {
+    col-offset = <6>;
+};
+
+// Same pins as the left half (the PCB is mirrored), but listed inner -> outer
+// so that they run physical left to right on this half.
+&kscan0 {
+    col-gpios
+        = <&pro_micro 5 GPIO_ACTIVE_HIGH> // inner
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH> // index
+        , <&pro_micro 3 GPIO_ACTIVE_HIGH> // middle
+        , <&pro_micro 2 GPIO_ACTIVE_HIGH> // ring
+        , <&pro_micro 0 GPIO_ACTIVE_HIGH> // pinky
+        , <&pro_micro 1 GPIO_ACTIVE_HIGH> // outer
+        ;
+};
